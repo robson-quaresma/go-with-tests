@@ -14,3 +14,10 @@
 
 ## to see our covarage
 > go test -cover ./...
+
+## to run a specific test in table with
+> cd folder
+
+> go test -run TestName/KeyInOurTable .
+### example:
+> go test -run TestArea/Rectangle .
