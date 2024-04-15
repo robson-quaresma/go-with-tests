@@ -11,3 +11,6 @@
 
 ## to run benchmark Windows Powersheel
 > go test -bench="." ./...
+
+## to see our covarage
+> go test -cover ./...
