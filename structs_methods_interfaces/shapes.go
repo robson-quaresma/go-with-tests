@@ -1,20 +1,22 @@
 package structsmethodsinterfaces
 
+import "math"
+
 type Rectagle struct {
 	Width  float64
 	Height float64
 }
 
 func (r Rectagle) Area() float64 {
-	return 0
+	return r.Width * r.Height
 }
 
 type Circle struct {
 	Radius float64
 }
 
-func (r Circle) Area() float32 {
-	return 0
+func (c Circle) Area() float64 {
+	return math.Pi * c.Radius * c.Radius
 }
 
 func Perimeter(rectangle Rectagle) float64 {
