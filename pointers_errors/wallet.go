@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+// New: create a self error
+// with var keyword we can create global values in the package
+var ErrInsufficientFounds = errors.New("cannot withdraw, insufficient funds")
+
 // New: Go allows us to create new types from existing ones.
 type Bitcoin int
 
@@ -30,7 +34,7 @@ func (w *Wallet) Balance() Bitcoin {
 
 func (w *Wallet) Withdraw(amount Bitcoin) error {
 	if amount > w.balance {
-		return errors.New("oh no")
+		return ErrInsufficientFounds
 	}
 	w.balance -= amount
 	return nil
