@@ -15,7 +15,6 @@ func Racer(a, b string) (winner string) {
 }
 
 /*
-*
 In our case, we don't care what type is sent to the channel,
 we just want to signal we are done and closing the
 channel works perfectly!
