@@ -9,10 +9,10 @@ func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 
 	for _, url := range urls {
 		// New: working with go routines
-		go func() {
-			results[url] = wc(url)
-		}()
+		go func(u string) {
+			results[u] = wc(u)
+		}(url)
 	}
-	time.Sleep(2 * time.Second)
+	time.Sleep(5 * time.Second)
 	return results
 }
