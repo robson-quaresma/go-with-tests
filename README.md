@@ -21,3 +21,8 @@
 > go test -run TestName/KeyInOurTable .
 ### example:
 > go test -run TestArea/Rectangle .
+
+## to run with race detector
+> go test -race . 
+
+> go test -race ./...
