@@ -138,7 +138,7 @@ func TestWalk(t *testing.T) {
 
 	t.Run("with function", func(t *testing.T) {
 		aFunction := func() (Profile, Profile) {
-			return Profile{33, "Berlin"}, Profile{34, "QuaQua"}
+			return Profile{33, "Berlin"}, Profile{34, "Quaqua"}
 		}
 
 		var got []string
