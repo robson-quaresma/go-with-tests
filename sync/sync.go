@@ -7,6 +7,10 @@ type Counter struct {
 	value int
 }
 
+func NewCounter() *Counter {
+	return &Counter{}
+}
+
 // methods belongs to struct
 func (c *Counter) Inc() {
 	c.mu.Lock()

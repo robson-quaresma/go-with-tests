@@ -26,3 +26,6 @@
 > go test -race . 
 
 > go test -race ./...
+
+## to help us fix some possible errors
+> go vet ./...
